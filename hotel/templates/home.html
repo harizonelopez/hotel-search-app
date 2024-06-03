@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %} hotel homepage {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c35;
+            color: #fff;
+            align-items: center;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        header {
+            background-color: #1e2229;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #373c49;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #1e2229;
+            color: turquoise;
+            text-align: center;
+            padding: 0em 0;
+            position: fixed;
+            bottom: 0;
+            width: 65%;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        .text-center {
+            margin-top: -6%;
+            font-weight: bold;
+            color: green;
+        }
+    
+        h4 {
+            color: red;
+        }
+
+        h5 {
+            line-height: 1.2;
+            color: rgb(27, 215, 49);
+        }
+
+        h6 {
+            color: rgba(107, 17, 17, 0.985);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <hr>
+        <h1 align="center">GeeksforGeeks</h1>
+        <hr>
+        <br>
+        <section>
+            <div class="container">
+                <h4 align="center">Hotel Listings</h4>
+                <section>
+                    <div class="row">
+                        {% for hotel in hotels %}
+                            <div class="col-md-4 mb-4">
+                                <div class="card text-dark bg-light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ hotel.hotel_name }}</h5>
+                                        <h6 class="card-text">{{ hotel.hotel_description }}</h6>
+                                        <a href="#" class="btn btn-primary">USD. {{ hotel.hotel_price }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Dev_aladinh production</p>
+        </footer>
+    </section>
+</body>
+</html>
+{% endblock %}
