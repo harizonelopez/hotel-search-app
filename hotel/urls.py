@@ -1,5 +1,6 @@
 """
-URL configuration for the hotel_project urls.
+User URL configuration for the hotel_project.
+
 """
 
 from django.urls import path
