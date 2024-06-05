@@ -21,7 +21,7 @@
 ### 1. Clone the Repository
 
 ```sh
- git clone https://github.com/your-username/hotel-listings.git
+ git clone https://github.com/harizonelopez/hotel-listings.git
  cd hotel-listings
 ```
 
