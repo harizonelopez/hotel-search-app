@@ -56,5 +56,5 @@
  Open your web browser and go to http://127.0.0.1:8000 to view the application.
 
 ## Contact
- For any questions or feedback, please contact [harizonelopez@gmail.com]
+ For any questions or feedback, please contact [harizonelopez24@gmail.com]
  
