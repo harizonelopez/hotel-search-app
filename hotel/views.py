@@ -36,8 +36,8 @@ def get_hotel(request):
         return JsonResponse(payload, safe=False)
 
     except Exception as e:
-        logger.error("An error occurred while fetching hotel details: %s", e)
-        return JsonResponse({'message': 'Something went wrong!', 'error': str(e)}, status=500)
+        logger.error("An error occurred while fetching the hotel deails: %s", e)
+        return JsonResponse({'message': 'Oops! Something went wrong!', 'error': str(e)}, status=500)
     
 def add_hotel(request):
     if request.method == 'POST':
